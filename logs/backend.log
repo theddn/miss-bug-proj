@@ -1,0 +1,9 @@
+23.3.2025, 13:12:03 - ERROR - Cannot get bugs | TypeError: res.sen is not a function
+23.3.2025, 13:26:00 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 13:38:59 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 13:59:15 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:00:09 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:03:44 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:04:34 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:04:40 - INFO - Bug def456 has removed
+23.3.2025, 14:04:40 - ERROR - Cannot get bugs | TypeError: Cannot read properties of undefined (reading 'res')
