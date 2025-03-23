@@ -7,14 +7,6 @@ import { loggerService } from './services/logger.service.js'
 const app = express()
 
 
-// TODO: Provide an API for Bugs CRUDL:(Implement one by one along with a bugService)
-/*
-   app.get('/api/bug', (req, res) => {})
-   app.get('/api/bug/save', (req, res) => {})
-   app.get('/api/bug/:bugId', (req, res) => {})
-   app.get('/api/bug/:bugId/remove', (req, res) => {})
-*/
-
 app.get('/api/bug', (req, res) => {
     bugService.query().then(bugs => {
         res.send(bugs)
@@ -26,7 +18,26 @@ app.get('/api/bug', (req, res) => {
 
 app.get('/api/bug/save', (req, res) => {
 
+    loggerService.debug('req.query', req.query)
+
+    const { title, description, severity, _id } = req.query
+    console.log('req.query:', req.query)
+
+    const bug = {
+        _id,
+        title,
+        description,
+        severity: +severity,
+    }
+
+    bugService.save(bug).then((saveBug) => {
+        res.send(saveBug)
+    }).catch((err) => {
+        loggerService.error('Cannot savr bug', err)
+        res.status(400).send('Cannot save bug')
+    })
 })
+
 
 app.get('/api/bug/:bugId', (req, res) => {
     const { bugId } = req.params
@@ -35,25 +46,20 @@ app.get('/api/bug/:bugId', (req, res) => {
         .then(bugId => res.send(bugId))
         .catch((err) => {
             loggerService.error('Cannot get bugs', err)
-            res.status(400).send('Cannot get bugs')
+            res.status(400).send('Cannot get bug')
         })
 })
 
 app.get('/api/bug/:bugId/remove', (req, res) => {
     const { bugId } = req.params
     bugService.remove(bugId).then(() => {
-        loggerService.info(`Bug ${bugId} has removed`).res.send('Removed!')
+        loggerService.info(`Bug ${bugId} has removed`)
+        res.send('Removed!')
     }).catch((err) => {
-        loggerService.error('Cannot get bugs', err)
+        loggerService.error('Cannot get bug', err)
         res.status(400).send('Cannot get bug')
     })
 })
-
-
-app.get('/api/logs', (req, res) => {
-    res.sendFile(process.cwd() + '/logs/backend.log')
-})
-
 
 const port = 3030
 app.listen(port, () =>

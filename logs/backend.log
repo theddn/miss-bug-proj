@@ -7,3 +7,114 @@
 23.3.2025, 14:04:34 - INFO - Server listening on port http://127.0.0.1:3030/
 23.3.2025, 14:04:40 - INFO - Bug def456 has removed
 23.3.2025, 14:04:40 - ERROR - Cannot get bugs | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 14:22:56 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:22:58 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:29:32 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:34:27 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:34:36 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:34:38 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:34:49 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:34:52 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:35:12 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:35:13 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:35:25 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:35:30 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:35:39 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:36:02 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:36:02 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:37:04 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:37:17 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:37:17 - ERROR - Cannot get bugs | ReferenceError: fs is not defined
+23.3.2025, 14:37:48 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:37:53 - INFO - Bug def456 has removed
+23.3.2025, 14:37:53 - ERROR - Cannot get bugs | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 14:37:53 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 14:37:59 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:38:00 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:38:09 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 14:38:19 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 16:51:40 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 16:58:12 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 16:58:26 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 16:59:33 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:01:10 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:03:37 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:03:39 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:02 - INFO - Bug def456 has removed
+23.3.2025, 17:04:02 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:04:02 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:27 - INFO - Bug def456 has removed
+23.3.2025, 17:04:27 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:04:28 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:29 - INFO - Bug def456 has removed
+23.3.2025, 17:04:29 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:04:29 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:29 - INFO - Bug def456 has removed
+23.3.2025, 17:04:29 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:04:29 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:30 - INFO - Bug def456 has removed
+23.3.2025, 17:04:30 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:04:30 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:30 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:04:56 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:05:39 - INFO - Bug def456 has removed
+23.3.2025, 17:05:39 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:05:39 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:06:24 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:06:26 - INFO - Bug def456 has removed
+23.3.2025, 17:06:26 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:06:26 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:06:47 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:07:21 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:07:42 - INFO - Bug def456 has removed
+23.3.2025, 17:07:42 - ERROR - Cannot get bug | TypeError: Cannot read properties of undefined (reading 'res')
+23.3.2025, 17:07:43 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:08:07 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:09:51 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:10:23 - INFO - Bug def456 has removed
+23.3.2025, 17:10:24 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:10:37 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:32:56 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:34:11 - DEBUG - req.query : | {}
+23.3.2025, 17:35:57 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:36:54 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:41:55 - DEBUG - req.query : | {}
+23.3.2025, 17:42:45 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:42:57 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:44:56 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:45:07 - ERROR - Cannot get bugs | Bug not found!
+23.3.2025, 17:45:19 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:47:00 - DEBUG - req.query | {"title":"good","scription":""}
+23.3.2025, 17:49:09 - DEBUG - req.query | {"title":"will","description":"works","severity":"6","_id":"df4edf2"}
+23.3.2025, 17:49:12 - DEBUG - req.query | {"title":"will","description":"works","severity":"6","_id":"df4edf2"}
+23.3.2025, 17:49:12 - DEBUG - req.query | {"title":"will","description":"works","severity":"6","_id":"df4edf2"}
+23.3.2025, 17:49:42 - DEBUG - req.query | {"title":"will","description":"works","severity":"6","_id":"df4edf2"}
+23.3.2025, 17:49:43 - DEBUG - req.query | {"title":"will","description":"works","severity":"6","_id":"df4edf2"}
+23.3.2025, 17:50:16 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:50:24 - DEBUG - req.query | {"title":"will","description":"works","severity":"6","_id":"df4edf2"}
+23.3.2025, 17:50:25 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:50:25 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:51:17 - DEBUG - req.query | {"title":"will","description":"works","severity":"5","_id":"df4ed33"}
+23.3.2025, 17:51:17 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:51:18 - DEBUG - req.query | {"title":"will","description":"works","severity":"5","_id":"df4ed33"}
+23.3.2025, 17:51:19 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:53:38 - DEBUG - req.query | {"_id":"df4ed33title=will","description":"works","severity":"5"}
+23.3.2025, 17:53:38 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:54:13 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":"5"}
+23.3.2025, 17:54:13 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:54:19 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":"5"}
+23.3.2025, 17:54:20 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:54:46 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":""}
+23.3.2025, 17:54:46 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:54:56 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":""}
+23.3.2025, 17:54:56 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:54:59 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":""}
+23.3.2025, 17:55:00 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:55:25 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":"3","createAt":""}
+23.3.2025, 17:55:25 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:55:28 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":"3","createAt":""}
+23.3.2025, 17:55:28 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:55:32 - DEBUG - req.query | {"_id":"df4ed33","title":"will","description":"works","severity":""}
+23.3.2025, 17:55:32 - INFO - Server listening on port http://127.0.0.1:3030/
+23.3.2025, 17:57:39 - DEBUG - req.query | {"title":"will","description":"works","severity":"5"}
+23.3.2025, 17:57:39 - INFO - Server listening on port http://127.0.0.1:3030/
