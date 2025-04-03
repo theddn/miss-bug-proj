@@ -1,18 +1,16 @@
 {
-    "name": "-miss-bug-proj",
+    "name": "proj-node-server",
     "version": "1.0.0",
-    "main": "server.js",
-    "type": "module",
-    "directories": {
-        "lib": "lib"
-    },
+    "description": "",
+    "main": "simple-server.js",
     "scripts": {
+        "start": "node server.js",
         "dev": "nodemon --ignore \"./data\" server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
+    "type": "module",
     "author": "Dima",
     "license": "ISC",
-    "description": "",
     "dependencies": {
         "cookie-parser": "^1.4.7",
         "express": "^4.21.2",
