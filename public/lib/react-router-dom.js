@@ -10,9 +10,10 @@
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('history'), require('react-router')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'react', 'history', 'react-router'], factory) :
-  (global = global || self, factory(global.ReactRouterDOM = {}, global.React, global.HistoryLibrary, global.ReactRouter));
-}(this, (function (exports, React, history, reactRouter) { 'use strict';
+    typeof define === 'function' && define.amd ? define(['exports', 'react', 'history', 'react-router'], factory) :
+      (global = global || self, factory(global.ReactRouterDOM = {}, global.React, global.HistoryLibrary, global.ReactRouter));
+}(this, (function (exports, React, history, reactRouter) {
+  'use strict';
 
   function _extends() {
     _extends = Object.assign || function (target) {
@@ -48,7 +49,7 @@
   }
 
   const _excluded = ["onClick", "reloadDocument", "replace", "state", "target", "to"],
-        _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"];
+    _excluded2 = ["aria-current", "caseSensitive", "className", "end", "style", "to", "children"];
 
   function warning(cond, message) {
     if (!cond) {
@@ -62,7 +63,7 @@
         // find the source for a warning that appears in the console by
         // enabling "pause on exceptions" in your JavaScript debugger.
         throw new Error(message); // eslint-disable-next-line no-empty
-      } catch (e) {}
+      } catch (e) { }
     }
   } ////////////////////////////////////////////////////////////////////////////////
   // COMPONENTS
@@ -179,7 +180,7 @@
       target,
       to
     } = _ref4,
-        rest = _objectWithoutPropertiesLoose(_ref4, _excluded);
+      rest = _objectWithoutPropertiesLoose(_ref4, _excluded);
 
     let href = reactRouter.useHref(to);
     let internalOnClick = useLinkClickHandler(to, {
@@ -225,7 +226,7 @@
       to,
       children
     } = _ref5,
-        rest = _objectWithoutPropertiesLoose(_ref5, _excluded2);
+      rest = _objectWithoutPropertiesLoose(_ref5, _excluded2);
 
     let location = reactRouter.useLocation();
     let path = reactRouter.useResolvedPath(to);
@@ -292,8 +293,8 @@
     let path = reactRouter.useResolvedPath(to);
     return React.useCallback(event => {
       if (event.button === 0 && ( // Ignore everything but left clicks
-      !target || target === "_self") && // Let browser handle "target=_blank" etc.
-      !isModifiedEvent(event) // Ignore clicks with modifier keys
+        !target || target === "_self") && // Let browser handle "target=_blank" etc.
+        !isModifiedEvent(event) // Ignore clicks with modifier keys
       ) {
         event.preventDefault(); // If the URL hasn't changed, a regular <a> will do a replace instead of
         // a push, so do the same here.
@@ -312,7 +313,7 @@
    */
 
   function useSearchParams(defaultInit) {
-     warning(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not " + "support the URLSearchParams API. If you need to support Internet " + "Explorer 11, we recommend you load a polyfill such as " + "https://github.com/ungap/url-search-params\n\n" + "If you're unsure how to load polyfills, we recommend you check out " + "https://polyfill.io/v3/ which provides some recommendations about how " + "to load polyfills only for users that need them, instead of for every " + "user.") ;
+    warning(typeof URLSearchParams !== "undefined", "You cannot use the `useSearchParams` hook in a browser that does not " + "support the URLSearchParams API. If you need to support Internet " + "Explorer 11, we recommend you load a polyfill such as " + "https://github.com/ungap/url-search-params\n\n" + "If you're unsure how to load polyfills, we recommend you check out " + "https://polyfill.io/v3/ which provides some recommendations about how " + "to load polyfills only for users that need them, instead of for every " + "user.");
     let defaultSearchParamsRef = React.useRef(createSearchParams(defaultInit));
     let location = reactRouter.useLocation();
     let searchParams = React.useMemo(() => {

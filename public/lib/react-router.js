@@ -10,9 +10,10 @@
  */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('history'), require('react')) :
-  typeof define === 'function' && define.amd ? define(['exports', 'history', 'react'], factory) :
-  (global = global || self, factory(global.ReactRouter = {}, global.HistoryLibrary, global.React));
-}(this, (function (exports, history, React) { 'use strict';
+    typeof define === 'function' && define.amd ? define(['exports', 'history', 'react'], factory) :
+      (global = global || self, factory(global.ReactRouter = {}, global.HistoryLibrary, global.React));
+}(this, (function (exports, history, React) {
+  'use strict';
 
   const NavigationContext = /*#__PURE__*/React.createContext(null);
 
@@ -50,14 +51,14 @@
         // find the source for a warning that appears in the console by
         // enabling "pause on exceptions" in your JavaScript debugger.
         throw new Error(message); // eslint-disable-next-line no-empty
-      } catch (e) {}
+      } catch (e) { }
     }
   }
   const alreadyWarned = {};
   function warningOnce(key, cond, message) {
     if (!cond && !alreadyWarned[key]) {
       alreadyWarned[key] = true;
-       warning(false, message) ;
+      warning(false, message);
     }
   }
 
@@ -72,7 +73,7 @@
     }
 
     return path.replace(/:(\w+)/g, (_, key) => {
-      !(params[key] != null) ?  invariant(false, "Missing \":" + key + "\" param")  : void 0;
+      !(params[key] != null) ? invariant(false, "Missing \":" + key + "\" param") : void 0;
       return params[key];
     }).replace(/\/*\*$/, _ => params["*"] == null ? "" : params["*"].replace(/^\/*/, "/"));
   }
@@ -130,7 +131,7 @@
       };
 
       if (meta.relativePath.startsWith("/")) {
-        !meta.relativePath.startsWith(parentPath) ?  invariant(false, "Absolute route path \"" + meta.relativePath + "\" nested under path " + ("\"" + parentPath + "\" is not valid. An absolute child route path ") + "must start with the combined path of all its parent routes.")  : void 0;
+        !meta.relativePath.startsWith(parentPath) ? invariant(false, "Absolute route path \"" + meta.relativePath + "\" nested under path " + ("\"" + parentPath + "\" is not valid. An absolute child route path ") + "must start with the combined path of all its parent routes.") : void 0;
         meta.relativePath = meta.relativePath.slice(parentPath.length);
       }
 
@@ -140,7 +141,7 @@
       // the "flattened" version.
 
       if (route.children && route.children.length > 0) {
-        !(route.index !== true) ?  invariant(false, "Index routes must not have child routes. Please remove " + ("all child routes from route path \"" + path + "\"."))  : void 0;
+        !(route.index !== true) ? invariant(false, "Index routes must not have child routes. Please remove " + ("all child routes from route path \"" + path + "\".")) : void 0;
         flattenRoutes(route.children, branches, routesMeta, path);
       } // Routes without a path shouldn't ever match by themselves unless they are
       // index routes, so don't add them to the list of possible branches.
@@ -161,7 +162,7 @@
 
   function rankRouteBranches(branches) {
     branches.sort((a, b) => a.score !== b.score ? b.score - a.score // Higher score first
-    : compareIndexes(a.routesMeta.map(meta => meta.childrenIndex), b.routesMeta.map(meta => meta.childrenIndex)));
+      : compareIndexes(a.routesMeta.map(meta => meta.childrenIndex), b.routesMeta.map(meta => meta.childrenIndex)));
   }
 
   const paramRe = /^:\w+$/;
@@ -191,12 +192,12 @@
   function compareIndexes(a, b) {
     let siblings = a.length === b.length && a.slice(0, -1).every((n, i) => n === b[i]);
     return siblings ? // If two routes are siblings, we should try to match the earlier sibling
-    // first. This allows people to have fine-grained control over the matching
-    // behavior by simply putting routes with identical paths in the order they
-    // want them tried.
-    a[a.length - 1] - b[b.length - 1] : // Otherwise, it doesn't really make sense to rank non-siblings by index,
-    // so they sort equally.
-    0;
+      // first. This allows people to have fine-grained control over the matching
+      // behavior by simply putting routes with identical paths in the order they
+      // want them tried.
+      a[a.length - 1] - b[b.length - 1] : // Otherwise, it doesn't really make sense to rank non-siblings by index,
+      // so they sort equally.
+      0;
   }
 
   function matchRouteBranch(branch, pathname) {
@@ -287,29 +288,29 @@
       end = true;
     }
 
-     warning(path === "*" || !path.endsWith("*") || path.endsWith("/*"), "Route path \"" + path + "\" will be treated as if it were " + ("\"" + path.replace(/\*$/, "/*") + "\" because the `*` character must ") + "always follow a `/` in the pattern. To get rid of this warning, " + ("please change the route path to \"" + path.replace(/\*$/, "/*") + "\".")) ;
+    warning(path === "*" || !path.endsWith("*") || path.endsWith("/*"), "Route path \"" + path + "\" will be treated as if it were " + ("\"" + path.replace(/\*$/, "/*") + "\" because the `*` character must ") + "always follow a `/` in the pattern. To get rid of this warning, " + ("please change the route path to \"" + path.replace(/\*$/, "/*") + "\"."));
     let paramNames = [];
     let regexpSource = "^" + path.replace(/\/*\*?$/, "") // Ignore trailing / and /*, we'll handle it below
-    .replace(/^\/*/, "/") // Make sure it has a leading /
-    .replace(/[\\.*+^$?{}|()[\]]/g, "\\$&") // Escape special regex chars
-    .replace(/:(\w+)/g, (_, paramName) => {
-      paramNames.push(paramName);
-      return "([^\\/]+)";
-    });
+      .replace(/^\/*/, "/") // Make sure it has a leading /
+      .replace(/[\\.*+^$?{}|()[\]]/g, "\\$&") // Escape special regex chars
+      .replace(/:(\w+)/g, (_, paramName) => {
+        paramNames.push(paramName);
+        return "([^\\/]+)";
+      });
 
     if (path.endsWith("*")) {
       paramNames.push("*");
       regexpSource += path === "*" || path === "/*" ? "(.*)$" // Already matched the initial /, just match the rest
-      : "(?:\\/(.+)|\\/*)$"; // Don't include the / in params["*"]
+        : "(?:\\/(.+)|\\/*)$"; // Don't include the / in params["*"]
     } else {
       regexpSource += end ? "\\/*$" // When matching to the end, ignore trailing slashes
-      : // Otherwise, match a word boundary or a proceeding /. The word boundary restricts
-      // parent routes to matching only their own words and nothing more, e.g. parent
-      // route "/home" should not match "/home2".
-      // Additionally, allow paths starting with `.`, `-`, `~`, and url-encoded entities,
-      // but do not consume the character in the matched path so they can match against
-      // nested paths.
-      "(?:(?=[.~-]|%[0-9A-F]{2})|\\b|\\/|$)";
+        : // Otherwise, match a word boundary or a proceeding /. The word boundary restricts
+        // parent routes to matching only their own words and nothing more, e.g. parent
+        // route "/home" should not match "/home2".
+        // Additionally, allow paths starting with `.`, `-`, `~`, and url-encoded entities,
+        // but do not consume the character in the matched path so they can match against
+        // nested paths.
+        "(?:(?=[.~-]|%[0-9A-F]{2})|\\b|\\/|$)";
     }
 
     let matcher = new RegExp(regexpSource, caseSensitive ? undefined : "i");
@@ -320,7 +321,7 @@
     try {
       return decodeURIComponent(value);
     } catch (error) {
-       warning(false, "The value for the URL param \"" + paramName + "\" will not be decoded because" + (" the string \"" + value + "\" is a malformed URL segment. This is probably") + (" due to a bad percent encoding (" + error + ").")) ;
+      warning(false, "The value for the URL param \"" + paramName + "\" will not be decoded because" + (" the string \"" + value + "\" is a malformed URL segment. This is probably") + (" due to a bad percent encoding (" + error + ")."));
       return value;
     }
   }
@@ -441,9 +442,9 @@
    */
 
   function useHref(to) {
-    !useInRouterContext() ?  invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
-    // router loaded. We can help them understand how to avoid that.
-    "useHref() may be used only in the context of a <Router> component.")  : void 0;
+    !useInRouterContext() ? invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
+      // router loaded. We can help them understand how to avoid that.
+      "useHref() may be used only in the context of a <Router> component.") : void 0;
     let {
       basename,
       navigator
@@ -488,9 +489,9 @@
    */
 
   function useLocation() {
-    !useInRouterContext() ?  invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
-    // router loaded. We can help them understand how to avoid that.
-    "useLocation() may be used only in the context of a <Router> component.")  : void 0;
+    !useInRouterContext() ? invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
+      // router loaded. We can help them understand how to avoid that.
+      "useLocation() may be used only in the context of a <Router> component.") : void 0;
     return React.useContext(LocationContext).location;
   }
   /**
@@ -512,9 +513,9 @@
    */
 
   function useMatch(pattern) {
-    !useInRouterContext() ?  invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
-    // router loaded. We can help them understand how to avoid that.
-    "useMatch() may be used only in the context of a <Router> component.")  : void 0;
+    !useInRouterContext() ? invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
+      // router loaded. We can help them understand how to avoid that.
+      "useMatch() may be used only in the context of a <Router> component.") : void 0;
     let {
       pathname
     } = useLocation();
@@ -531,9 +532,9 @@
    * @see https://reactrouter.com/docs/en/v6/api#usenavigate
    */
   function useNavigate() {
-    !useInRouterContext() ?  invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
-    // router loaded. We can help them understand how to avoid that.
-    "useNavigate() may be used only in the context of a <Router> component.")  : void 0;
+    !useInRouterContext() ? invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
+      // router loaded. We can help them understand how to avoid that.
+      "useNavigate() may be used only in the context of a <Router> component.") : void 0;
     let {
       basename,
       navigator
@@ -554,7 +555,7 @@
         options = {};
       }
 
-       warning(activeRef.current, "You should call navigate() in a React.useEffect(), not when " + "your component is first rendered.") ;
+      warning(activeRef.current, "You should call navigate() in a React.useEffect(), not when " + "your component is first rendered.");
       if (!activeRef.current) return;
 
       if (typeof to === "number") {
@@ -640,9 +641,9 @@
    */
 
   function useRoutes(routes, locationArg) {
-    !useInRouterContext() ?  invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
-    // router loaded. We can help them understand how to avoid that.
-    "useRoutes() may be used only in the context of a <Router> component.")  : void 0;
+    !useInRouterContext() ? invariant(false, // TODO: This error is probably because they somehow have 2 versions of the
+      // router loaded. We can help them understand how to avoid that.
+      "useRoutes() may be used only in the context of a <Router> component.") : void 0;
     let {
       matches: parentMatches
     } = React.useContext(RouteContext);
@@ -684,7 +685,7 @@
       var _parsedLocationArg$pa;
 
       let parsedLocationArg = typeof locationArg === "string" ? history.parsePath(locationArg) : locationArg;
-      !(parentPathnameBase === "/" || ((_parsedLocationArg$pa = parsedLocationArg.pathname) == null ? void 0 : _parsedLocationArg$pa.startsWith(parentPathnameBase))) ?  invariant(false, "When overriding the location using `<Routes location>` or `useRoutes(routes, location)`, " + "the location pathname must begin with the portion of the URL pathname that was " + ("matched by all parent routes. The current pathname base is \"" + parentPathnameBase + "\" ") + ("but pathname \"" + parsedLocationArg.pathname + "\" was given in the `location` prop."))  : void 0;
+      !(parentPathnameBase === "/" || ((_parsedLocationArg$pa = parsedLocationArg.pathname) == null ? void 0 : _parsedLocationArg$pa.startsWith(parentPathnameBase))) ? invariant(false, "When overriding the location using `<Routes location>` or `useRoutes(routes, location)`, " + "the location pathname must begin with the portion of the URL pathname that was " + ("matched by all parent routes. The current pathname base is \"" + parentPathnameBase + "\" ") + ("but pathname \"" + parsedLocationArg.pathname + "\" was given in the `location` prop.")) : void 0;
       location = parsedLocationArg;
     } else {
       location = locationFromContext;
@@ -697,8 +698,8 @@
     });
 
     {
-       warning(parentRoute || matches != null, "No routes matched location \"" + location.pathname + location.search + location.hash + "\" ") ;
-       warning(matches == null || matches[matches.length - 1].route.element !== undefined, "Matched leaf route at location \"" + location.pathname + location.search + location.hash + "\" does not have an element. " + "This means it will render an <Outlet /> with a null value by default resulting in an \"empty\" page.") ;
+      warning(parentRoute || matches != null, "No routes matched location \"" + location.pathname + location.search + location.hash + "\" ");
+      warning(matches == null || matches[matches.length - 1].route.element !== undefined, "Matched leaf route at location \"" + location.pathname + location.search + location.hash + "\" does not have an element. " + "This means it will render an <Outlet /> with a null value by default resulting in an \"empty\" page.");
     }
 
     return _renderMatches(matches && matches.map(match => Object.assign({}, match, {
@@ -775,10 +776,10 @@
       replace,
       state
     } = _ref2;
-    !useInRouterContext() ?  invariant(false, // TODO: This error is probably because they somehow have 2 versions of
-    // the router loaded. We can help them understand how to avoid that.
-    "<Navigate> may be used only in the context of a <Router> component.")  : void 0;
-     warning(!React.useContext(NavigationContext).static, "<Navigate> must not be used on the initial render in a <StaticRouter>. " + "This is a no-op, but you should modify your code so the <Navigate> is " + "only ever rendered in response to some user interaction or state change.") ;
+    !useInRouterContext() ? invariant(false, // TODO: This error is probably because they somehow have 2 versions of
+      // the router loaded. We can help them understand how to avoid that.
+      "<Navigate> may be used only in the context of a <Router> component.") : void 0;
+    warning(!React.useContext(NavigationContext).static, "<Navigate> must not be used on the initial render in a <StaticRouter>. " + "This is a no-op, but you should modify your code so the <Navigate> is " + "only ever rendered in response to some user interaction or state change.");
     let navigate = useNavigate();
     React.useEffect(() => {
       navigate(to, {
@@ -804,7 +805,7 @@
    * @see https://reactrouter.com/docs/en/v6/api#route
    */
   function Route(_props) {
-      invariant(false, "A <Route> is only ever to be used as the child of <Routes> element, " + "never rendered directly. Please wrap your <Route> in a <Routes>.")  ;
+    invariant(false, "A <Route> is only ever to be used as the child of <Routes> element, " + "never rendered directly. Please wrap your <Route> in a <Routes>.");
   }
 
   /**
@@ -825,7 +826,7 @@
       navigator,
       static: staticProp = false
     } = _ref3;
-    !!useInRouterContext() ?  invariant(false, "You cannot render a <Router> inside another <Router>." + " You should never have more than one in your app.")  : void 0;
+    !!useInRouterContext() ? invariant(false, "You cannot render a <Router> inside another <Router>." + " You should never have more than one in your app.") : void 0;
     let basename = normalizePathname(basenameProp);
     let navigationContext = React.useMemo(() => ({
       basename,
@@ -859,7 +860,7 @@
         key
       };
     }, [basename, pathname, search, hash, state, key]);
-     warning(location != null, "<Router basename=\"" + basename + "\"> is not able to match the URL " + ("\"" + pathname + search + hash + "\" because it does not start with the ") + "basename, so the <Router> won't render anything.") ;
+    warning(location != null, "<Router basename=\"" + basename + "\"> is not able to match the URL " + ("\"" + pathname + search + hash + "\" because it does not start with the ") + "basename, so the <Router> won't render anything.");
 
     if (location == null) {
       return null;
@@ -915,7 +916,7 @@
         return;
       }
 
-      !(element.type === Route) ?  invariant(false, "[" + (typeof element.type === "string" ? element.type : element.type.name) + "] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>")  : void 0;
+      !(element.type === Route) ? invariant(false, "[" + (typeof element.type === "string" ? element.type : element.type.name) + "] is not a <Route> component. All component children of <Routes> must be a <Route> or <React.Fragment>") : void 0;
       let route = {
         caseSensitive: element.props.caseSensitive,
         element: element.props.element,

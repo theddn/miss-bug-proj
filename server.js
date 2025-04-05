@@ -44,7 +44,6 @@ app.get('/api/bug/save', (req, res) => {
 
 app.get('/api/bug/:bugId', (req, res) => {
     const { bugId } = req.params
-    console.log('req.params:', req.params)
     bugService.getById(bugId)
         .then(bugId => res.send(bugId))
         .catch((err) => {
