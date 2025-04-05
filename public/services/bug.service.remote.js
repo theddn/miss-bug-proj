@@ -1,4 +1,4 @@
-const BASE_URL = '/api/bug'
+const BASE_URL = '/api/bug/'
 
 export const bugService = {
     query,
@@ -31,7 +31,8 @@ function getById(bugId) {
 }
 
 function remove(bugId) {
-    return storageService.remove(STORAGE_KEY, bugId)
+    const url = BASE_URL + bugId + '/remove'
+    return axios.get(url)
 }
 
 function save(bug) {
