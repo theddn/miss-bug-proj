@@ -1,12 +1,5 @@
 [
     {
-        "_id": "R1ZVgr",
-        "title": "will",
-        "description": "works",
-        "severity": 5,
-        "createdAt": 1742745459512
-    },
-    {
         "_id": "def456",
         "title": "Page crashes on load",
         "description": "The homepage crashes when loading on Firefox",

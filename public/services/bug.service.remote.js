@@ -37,11 +37,11 @@ function remove(bugId) {
 }
 
 function save(bug) {
-    if (bug._id) {
-        return storageService.put(STORAGE_KEY, bug)
-    } else {
-        return axios.get(BASE_URL, bug)
-    }
+    var queryParams = `title=${bug.title}&description=${bug.description}&severity=${bug.severity}`
+    if (bug._id) queryParams += `&_id=${bug._id}`
+    return axios.get(BASE_URL + 'save?' + queryParams)
+        .then(res => res.data)
+
 }
 
 
