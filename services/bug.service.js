@@ -30,7 +30,7 @@ function remove(bugId) {
 }
 
 function save(bug) {
-    console.log('bug:', bug)
+
     if (bug._id) {
         const idx = bugs.findIndex(currBug => currBug._id === bug._id)
         bug[idx] = { ...bugs[idx], ...bug }
@@ -47,11 +47,13 @@ function save(bug) {
 
 function _saveBugsToFile() {
     return new Promise((resolve, reject) => {
-        const data = JSON.stringify(bugs, null, 4)
+        const data = JSON.stringify(bugs, null, 2)
         fs.writeFile('data/bug.json', data, (err) => {
             if (err) {
+                loggerService.error('Cannot write to bugs file', err)
                 return reject(err)
             }
+            console.log('The file was saved!')
             resolve()
         })
     })

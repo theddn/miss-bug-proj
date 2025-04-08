@@ -166,3 +166,30 @@
 6.4.2025, 22:08:52 - INFO - Server listening on port http://127.0.0.1:3030/
 6.4.2025, 22:10:25 - INFO - Server listening on port http://127.0.0.1:3030/
 6.4.2025, 22:10:47 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 14:37:50 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:23:10 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:23:48 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:23:59 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:24:01 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:28:21 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:28:45 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:28:52 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:31:29 - DEBUG - req.query | {"title":"fgd","description":"undefined","severity":"NaN"}
+8.4.2025, 15:31:29 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:31:34 - DEBUG - req.query | {"title":"Bug 1744115fdgfdg490877","description":"undefined","severity":"NaN"}
+8.4.2025, 15:31:34 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:31:42 - DEBUG - req.query | {"title":"fdgdfg","description":"undefined","severity":"0"}
+8.4.2025, 15:31:42 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:31:49 - DEBUG - req.query | {"title":"fgdfg","description":"undefined","severity":"3"}
+8.4.2025, 15:31:49 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:31:54 - DEBUG - req.query | {"title":"null","description":"undefined","severity":"0"}
+8.4.2025, 15:31:54 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:32:12 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:33:31 - INFO - Bug pqr678 has removed
+8.4.2025, 15:33:31 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:33:49 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:37:44 - DEBUG - req.query | {"title":"Mobile layout broken","description":"The UI is not aligned properly on mobile screens","severity":"0","_id":"pqr678"}
+8.4.2025, 15:37:44 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:40:36 - DEBUG - req.query | {"title":"Login button unresponsive","description":"Nothing happens when clicking the login button","severity":"0","_id":"ghi789"}
+8.4.2025, 15:40:36 - INFO - Server listening on port http://127.0.0.1:3030/
+8.4.2025, 15:41:51 - INFO - Server listening on port http://127.0.0.1:3030/
