@@ -4,27 +4,39 @@
         "title": "Page crashes on load",
         "description": "The homepage crashes when loading on Firefox",
         "severity": 2,
-        "createdAt": 1623456789000
+        "createdAt": 1623456789000,
+        "labels": "['back', 'fixed']"
     },
     {
         "_id": "ghi789",
         "title": "Login button unresponsive",
         "description": "Nothing happens when clicking the login button",
-        "severity": 4,
-        "createdAt": 1645123456000
+        "severity": 2,
+        "createdAt": 1645123456000,
+        "labels": "['front', 'fixed']"
     },
     {
         "_id": "mno345",
         "title": "Incorrect total price calculation",
         "description": "Cart total does not include discounts properly",
         "severity": 3,
-        "createdAt": 1701234567000
+        "createdAt": 1701234567000,
+        "labels": "['fixed']"
     },
     {
         "_id": "pqr678",
         "title": "Mobile layout broken",
         "description": "The UI is not aligned properly on mobile screens",
         "severity": 1,
-        "createdAt": 1734567890000
+        "createdAt": 1734567890000,
+        "labels": "['front', 'critical']"
+    },
+    {
+        "title": "Having a realy bad day",
+        "description": "Things be going wrong!",
+        "severity": 4,
+        "_id": "5VMXD",
+        "createdAt": 1743066297952,
+        "labels": "['back', 'fixed']"
     }
 ]

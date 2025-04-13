@@ -193,3 +193,56 @@
 8.4.2025, 15:40:36 - DEBUG - req.query | {"title":"Login button unresponsive","description":"Nothing happens when clicking the login button","severity":"0","_id":"ghi789"}
 8.4.2025, 15:40:36 - INFO - Server listening on port http://127.0.0.1:3030/
 8.4.2025, 15:41:51 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 14:41:46 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 14:49:09 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 14:49:35 - INFO - Bug ghi789 has removed
+10.4.2025, 14:57:35 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 14:57:40 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 15:02:54 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 15:02:59 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 15:03:09 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 15:03:16 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 17:33:15 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 17:33:45 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 17:38:50 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 17:38:55 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 17:51:05 - INFO - Server listening on port http://127.0.0.1:3030/
+10.4.2025, 17:53:15 - INFO - Server listening on port http://127.0.0.1:3030/
+11.4.2025, 19:32:49 - INFO - Server listening on port http://127.0.0.1:3030/
+11.4.2025, 19:46:00 - DEBUG - req.query | {"title":"Login button unresponsive","description":"Nothing happens when clicking the login button","severity":"0","_id":"ghi789"}
+12.4.2025, 10:38:28 - INFO - Server listening on port http://127.0.0.1:3030/
+12.4.2025, 10:42:29 - INFO - Server listening on port http://127.0.0.1:3030/
+12.4.2025, 10:43:02 - INFO - Server listening on port http://127.0.0.1:3030/
+12.4.2025, 10:43:48 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:05:47 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:14:56 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:16:21 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:16:27 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:17:04 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:19:32 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:19:47 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:21:19 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:21:26 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:21:36 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:21:43 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:22:53 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:26:13 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:39:55 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:44:44 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:45:24 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:51:34 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:53:30 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:53:33 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:54:32 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:54:33 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:54:46 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:55:04 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:56:00 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 10:58:42 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 11:01:56 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 11:03:37 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 11:04:53 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 11:04:56 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 11:04:58 - INFO - Server listening on port http://127.0.0.1:3030/
+13.4.2025, 11:06:16 - INFO - Bug 72yVP removed
+13.4.2025, 11:07:44 - INFO - Server listening on port http://127.0.0.1:3030/
