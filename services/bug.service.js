@@ -12,8 +12,9 @@ export const bugService = {
 }
 const bugs = utilService.readJsonFile('data/bug.json')
 
-function query(filterBy) {
-    const bugsToReturn = [...bugs]
+function query(queryOptions) {
+    const { filterBy, sortBy, pagination } = queryOptions
+    var bugsToReturn = [...bugs]
 
     if (filterBy.txt) {
         const regExp = new RegExp(filterBy.txt, 'i')
@@ -26,15 +27,27 @@ function query(filterBy) {
             bugsToReturn.filter(bug => bug.severity >= filterBy.minSeverity)
     }
 
-    if (filterBy.sortField === 'severity' || filterBy.sortField === 'createdAt') {
-        const { sortField } = filterBy
+    if (filterBy.labels && filterBy.labels.length > 0) {
+        bugsToReturn =
+            bugsToReturn.filter(bug =>
+                filterBy.labels.some(label => bug?.labels?.includes(label)))
+    }
+    if (sortBy.sortField === 'severity' || sortBy.sortField === 'createdAt') {
+        const { sortField } = sortBy
 
         bugsToReturn.sort((bug1, bug2) =>
-            (bug1[sortField] - bug2[sortField]) * filterBy.sortDir)
-    } else if (filterBy.sortField === 'title') {
+            (bug1[sortField] - bug2[sortField]) * sortBy.sortDir)
+    } else if (sortBy.sortField === 'title') {
         bugsToReturn.sort((bug1, bug2) =>
-            (bug1.txt.localeCompare(bug2.txt)) * filterBy.sortDir)
+            (bug1.title.localeCompare(bug2.title)) * sortBy.sortDir)
     }
+    if (pagination.pageIdx !== undefined) {
+        const { pageIdx, pageSize } = pagination
+
+        const startIdx = pageIdx * pageSize
+        bugsToReturn = bugsToReturn.slice(startIdx, startIdx + pageSize)
+    }
+
 
     return Promise.resolve(bugsToReturn)
 }
